@@ -9,8 +9,7 @@ import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
@@ -19,10 +18,9 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "recipe")
-@Data
-@Builder(access = AccessLevel.PUBLIC)
+@Getter
 @NoArgsConstructor(force = true, access = AccessLevel.PROTECTED)
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@AllArgsConstructor
 public class Recipe {
 
     @Id
