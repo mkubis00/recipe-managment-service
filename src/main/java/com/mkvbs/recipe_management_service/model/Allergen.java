@@ -13,5 +13,6 @@ public enum Allergen {
     MUSTARD,
     SESAME,
     LUPINE,
-    MOLLUSKS;
+    MOLLUSKS,
+    NONE;
 }

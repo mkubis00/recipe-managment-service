@@ -9,12 +9,12 @@ import java.util.UUID;
 
 @Data
 @Builder(access = AccessLevel.PUBLIC)
-@AllArgsConstructor(access = AccessLevel.PUBLIC)
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class Ingredient {
 
     private final UUID id;
     private final String name;
-    private final double quantity;
+    private double quantity;
     private final TypeOfQuantity typeOfQuantity;
     private final Allergen allergen;
 }
