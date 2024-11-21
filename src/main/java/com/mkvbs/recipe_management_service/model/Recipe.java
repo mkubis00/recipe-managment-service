@@ -12,6 +12,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -37,4 +38,16 @@ public class Recipe {
     private final Map<UUID, Double> ingredientsUuidAndQuantity;
     @Transient
     private List<Ingredient> ingredients;
+
+    public Recipe(String name, String description, MealType mealType, List<String> picturesLinks,
+                  List<String> recipeSteps, Map<UUID, Double> ingredientsUuidAndQuantity) {
+        this.id = null;
+        this.name = name;
+        this.description = description;
+        this.mealType = mealType;
+        this.picturesLinks = picturesLinks;
+        this.recipeSteps = recipeSteps;
+        this.ingredientsUuidAndQuantity = ingredientsUuidAndQuantity;
+        this.ingredients = new ArrayList<>();
+    }
 }
