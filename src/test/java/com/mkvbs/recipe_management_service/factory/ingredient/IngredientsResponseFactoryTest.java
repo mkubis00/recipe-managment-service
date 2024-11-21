@@ -12,5 +12,6 @@ class IngredientsResponseFactoryTest {
 
     @Test
     void create() {
+        //
     }
 }
