@@ -1,18 +1,11 @@
 package com.mkvbs.recipe_management_service.service;
 
-import com.mkvbs.recipe_management_service.factory.Factory;
-import com.mkvbs.recipe_management_service.model.Ingredient;
 import com.mkvbs.recipe_management_service.model.Recipe;
-import com.mkvbs.recipe_management_service.model.api.IngredientRequest;
 import com.mkvbs.recipe_management_service.model.api.RecipeRequest;
-import com.mkvbs.recipe_management_service.model.api.RecipeResponse;
-import com.mkvbs.recipe_management_service.model.api.SmallRecipeResponse;
 import com.mkvbs.recipe_management_service.proxy.IngredientManagementProxy;
 import com.mkvbs.recipe_management_service.repository.RecipeRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 
 @Service

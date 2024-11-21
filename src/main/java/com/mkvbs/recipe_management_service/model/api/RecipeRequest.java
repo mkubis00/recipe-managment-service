@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 @Getter
@@ -16,6 +17,5 @@ public class RecipeRequest {
     private final MealType mealType;
     private final List<String> picturesLinks;
     private final List<String> recipeSteps;
-    private final List<UUID> alreadyExistingIngredients;
-    private final List<IngredientRequest> newIngredients;
+    private final Map<UUID, Double> ingredients;
 }
