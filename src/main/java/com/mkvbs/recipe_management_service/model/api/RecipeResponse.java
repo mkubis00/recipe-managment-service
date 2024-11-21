@@ -1,6 +1,5 @@
 package com.mkvbs.recipe_management_service.model.api;
 
-import com.mkvbs.recipe_management_service.model.Ingredient;
 import com.mkvbs.recipe_management_service.model.MealType;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -18,5 +17,5 @@ public class RecipeResponse {
     private final MealType mealType;
     private final List<String> picturesLinks;
     private final List<String> recipeSteps;
-    private List<Ingredient> ingredients;
+    private List<IngredientResponse> ingredients;
 }

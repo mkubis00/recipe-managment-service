@@ -25,7 +25,7 @@ public class IngredientsResponseFactory implements Factory<List<IngredientRespon
     }
 
     private IngredientResponse createIngredientResponse(Ingredient ingredient) {
-        return new IngredientResponse(ingredient.getQuantity(), ingredient.getName(),
+        return new IngredientResponse(ingredient.getId(), ingredient.getQuantity(), ingredient.getName(),
                 ingredient.getTypeOfQuantity(), ingredient.getAllergen());
     }
 }
