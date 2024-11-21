@@ -27,6 +27,6 @@ public class RecipeResponseFactory implements Factory<RecipeResponse, Recipe> {
                 resource.getMealType(),
                 resource.getPicturesLinks(),
                 resource.getRecipeSteps(),
-                resource.getIngredients());
+                ingredientsResponse);
     }
 }
