@@ -37,7 +37,8 @@ jobs:
 
       # only required for workflows in private repositories
       actions: read
-      contents: read
+      contents: write
+      dependency-graph: write
 
     strategy:
       fail-fast: false
