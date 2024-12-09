@@ -1,4 +1,4 @@
-package com.mkvbs.recipe_management_service;
+package com.mkvbs.recipe_management_service.integration;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.springframework.beans.factory.annotation.Autowired;
