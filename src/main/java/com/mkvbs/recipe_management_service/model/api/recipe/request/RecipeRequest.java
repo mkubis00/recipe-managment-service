@@ -1,4 +1,4 @@
-package com.mkvbs.recipe_management_service.model.api;
+package com.mkvbs.recipe_management_service.model.api.recipe.request;
 
 import com.mkvbs.recipe_management_service.model.MealType;
 import lombok.AllArgsConstructor;
@@ -10,7 +10,7 @@ import java.util.UUID;
 
 @Getter
 @AllArgsConstructor
-public class RecipeRequest {
+public abstract class RecipeRequest {
 
     private final String name;
     private final String description;
