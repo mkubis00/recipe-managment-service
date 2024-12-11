@@ -9,6 +9,7 @@ import com.mkvbs.recipe_management_service.model.api.recipe.request.RecipeReques
 import com.mkvbs.recipe_management_service.proxy.IngredientManagementProxy;
 import com.mkvbs.recipe_management_service.resource.api.ApiPath;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.HttpStatus;
