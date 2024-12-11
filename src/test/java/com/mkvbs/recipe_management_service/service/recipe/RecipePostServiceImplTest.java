@@ -18,6 +18,7 @@ import com.mkvbs.recipe_management_service.proxy.IngredientManagementProxy;
 import com.mkvbs.recipe_management_service.repository.RecipeRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;
@@ -86,6 +87,8 @@ class RecipePostServiceImplTest {
 
         when(firstResponseEntity.getBody()).thenReturn(firstIngredient);
         when(secondResponseEntity.getBody()).thenReturn(secondIngredient);
+        when(firstResponseEntity.getStatusCode()).thenReturn(HttpStatus.OK);
+        when(secondResponseEntity.getStatusCode()).thenReturn(HttpStatus.OK);
         when(recipeRepository.save(any())).thenReturn(recipeEntity);
     }
 
