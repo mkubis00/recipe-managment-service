@@ -23,6 +23,7 @@ public class RecipeFactory {
 
     public Recipe createFromRecipeEntity(RecipeEntity resource, List<Ingredient> ingredients) {
         return new Recipe(
+                resource.getId(),
                 resource.getName(),
                 resource.getDescription(),
                 resource.getMealType(),

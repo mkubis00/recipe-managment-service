@@ -1,6 +1,5 @@
-package com.mkvbs.recipe_management_service.unit_tests.factory;
+package com.mkvbs.recipe_management_service.factory;
 
-import com.mkvbs.recipe_management_service.factory.RecipeFactory;
 import com.mkvbs.recipe_management_service.model.Allergen;
 import com.mkvbs.recipe_management_service.model.Ingredient;
 import com.mkvbs.recipe_management_service.model.MealType;
