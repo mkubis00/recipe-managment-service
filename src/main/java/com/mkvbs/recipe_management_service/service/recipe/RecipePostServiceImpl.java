@@ -7,9 +7,11 @@ import com.mkvbs.recipe_management_service.model.Recipe;
 import com.mkvbs.recipe_management_service.model.api.recipe.request.RecipeRequestWithoutNewIngredients;
 import com.mkvbs.recipe_management_service.model.api.recipe.response.RecipeDetailResponse;
 import com.mkvbs.recipe_management_service.model.entity.RecipeEntity;
+import com.mkvbs.recipe_management_service.model.exception.EntityNotFoundException;
 import com.mkvbs.recipe_management_service.proxy.IngredientManagementProxy;
 import com.mkvbs.recipe_management_service.repository.RecipeRepository;
 import lombok.AllArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -50,6 +52,11 @@ public class RecipePostServiceImpl implements RecipePostService<RecipeRequestWit
     }
 
     private Ingredient getIngredientById(UUID id) {
-        return ingredientProxy.getIngredientById(id).getBody();
+        ResponseEntity<Ingredient> ingredientById = ingredientProxy.getIngredientById(id);
+        if (ingredientById.getStatusCode().is2xxSuccessful()) {
+            return ingredientById.getBody();
+        } else {
+            throw new EntityNotFoundException("Ingredient with id " + id + " not found.");
+        }
     }
 }
