@@ -20,8 +20,8 @@ public class BasicIntegration {
 
     static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres")
             .withDatabaseName("test_database")
-            .withUsername("root")
-            .withPassword("root")
+            .withUsername("test")
+            .withPassword("test")
             .withExposedPorts(5435);
 
     @BeforeAll
